@@ -3,7 +3,7 @@ const router = express.Router();
 const { callTwitterApi, getMutualFriend } = require("./services");
 
 router.get("/", (req, res) => {
-  res.send(process.env);
+  res.send("Hello World !!");
 });
 
 router.get("/friends/mutual/:user1/:user2", async (req, res) => {
