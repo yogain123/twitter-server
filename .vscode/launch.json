@@ -4,14 +4,24 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}/index.js"
-        }
+    {
+    // "type": "node",
+    // "env": {
+    // "NODE_ENV": "uat"
+    // },
+    // "request": "launch",
+    // "name": "Launch Program",
+    // "program": "${workspaceRoot}/app.js",
+    // "runtimeVersion": "^8.9.4"
+    "type": "node",
+    "runtimeExecutable": "nodemon",
+    "request": "launch",
+    "restart": true,
+    "name": "Launch test",
+    "runtimeVersion": "8.9.4",
+    "program": "${workspaceFolder}/index.js",
+    "console": "integratedTerminal",
+    "internalConsoleOptions": "neverOpen"
+    }
     ]
-}
+    }

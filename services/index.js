@@ -15,10 +15,13 @@ exports.callTwitterApi = async function(screen_name) {
   let resultArray = [];
   let cursor = undefined;
   let getDataFromAPI;
+  let count = 1;
   do{
     getDataFromAPI = await promiseTwitterData(screen_name,cursor);
+    console.log(`API HIT ${count} for ${screen_name}`); 
+    count++;
     if(!getDataFromAPI.serverStatus){
-      return { serverStatus: false }
+      return {...getDataFromAPI};
     }
     else{
       resultArray = [...resultArray, ...getDataFromAPI.data];
@@ -38,6 +41,8 @@ const promiseTwitterData = function(screen_name, cursor){
       if(!err){
         return resolve({ serverStatus: true, data: data.users , cursor:data.next_cursor});
       } else {
+        if(err[0].code === 88)
+        return resolve ({ serverStatus: false, message: err[0].message })
         resolve({ serverStatus: false });
       }
     })
