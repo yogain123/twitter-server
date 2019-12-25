@@ -6,7 +6,6 @@ var T = new twi(config);
 // Set up your search parameters
 var params = {
   q: '#nodejs',
-  count: 10,
   result_type: 'recent',
   lang: 'en',
 }
