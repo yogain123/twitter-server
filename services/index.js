@@ -27,7 +27,7 @@ exports.callTwitterApi = async function(screen_name) {
   }
   while(getDataFromAPI.cursor!==0);
 
-  return resultArray;
+  return { serverStatus: true, data: resultArray }
 };
 
 const promiseTwitterData = function(screen_name, cursor){
