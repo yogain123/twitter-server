@@ -8,6 +8,7 @@ var params = {
   q: '#nodejs',
   result_type: 'recent',
   lang: 'en',
+  count: 200
 }
 
 exports.callTwitterApi = async function(screen_name) {
