@@ -1,27 +1,27 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
     {
-    // "type": "node",
-    // "env": {
-    // "NODE_ENV": "uat"
-    // },
-    // "request": "launch",
-    // "name": "Launch Program",
-    // "program": "${workspaceRoot}/app.js",
-    // "runtimeVersion": "^8.9.4"
-    "type": "node",
-    "runtimeExecutable": "nodemon",
-    "request": "launch",
-    "restart": true,
-    "name": "Launch test",
-    "runtimeVersion": "8.9.4",
-    "program": "${workspaceFolder}/index.js",
-    "console": "integratedTerminal",
-    "internalConsoleOptions": "neverOpen"
+      // "type": "node",
+      // "env": {
+      // "NODE_ENV": "uat"
+      // },
+      // "request": "launch",
+      // "name": "Launch Program",
+      // "program": "${workspaceRoot}/app.js",
+      // "runtimeVersion": "^8.9.4"
+      "type": "node",
+      "runtimeExecutable": "nodemon",
+      "request": "launch",
+      "restart": true,
+      "name": "Launch test",
+      "runtimeVersion": "8.9.4",
+      "program": "${workspaceFolder}/index.js",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
     }
-    ]
-    }
+  ]
+}
