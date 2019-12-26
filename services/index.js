@@ -41,9 +41,8 @@ const promiseTwitterData = function(screen_name, cursor){
       if(!err){
         return resolve({ serverStatus: true, data: data.users , cursor:data.next_cursor});
       } else {
-        if(err[0].code === 88)
-        return resolve ({ serverStatus: false, message: err[0].message })
-        resolve({ serverStatus: false });
+        if(err[0].code === 88) return resolve ({ serverStatus: false, message: err[0].message })
+        return resolve({ serverStatus: false });
       }
     })
   });
