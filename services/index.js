@@ -52,7 +52,8 @@ const promiseTwitterData = function(screen_name, cursor) {
 };
 
 exports.getMutualFriend = function(user1list, user2list) {
-  user1list = user1list.map(item => item.screen_name);
-  user2list = user2list.map(item => item.screen_name);
-  return user1list.filter(item => user2list.includes(item));
+  let res = user1list.filter(({ screen_name }) =>
+    user2list.find(i => i.screen_name === screen_name)
+  );
+  return res;
 };

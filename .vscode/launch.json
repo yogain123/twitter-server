@@ -18,7 +18,7 @@
       "request": "launch",
       "restart": true,
       "name": "Launch test",
-      "runtimeVersion": "8.9.4",
+      "runtimeVersion": "10.16.0",
       "program": "${workspaceFolder}/index.js",
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
