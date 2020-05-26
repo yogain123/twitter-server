@@ -9,6 +9,8 @@ router.get("/", (req, res) => {
 
 router.get("/friends/mutual/:user1/:user2", async (req, res) => {
   console.log("inside route /friends/mutual");
+  res.cookie("name", "yogendra");
+  res.cookie("age", 26);
   const { user1, user2 } = req.params;
   const [user1list, user2list] = await Promise.all([
     callTwitterApi(user1),
@@ -31,9 +33,6 @@ router.get("/friends/mutual/:user1/:user2", async (req, res) => {
       message: user1list.message,
     });
   }
-
-  res.cookie("name", "yogendra");
-  res.cookie("age", 26);
 
   return res.json({ status: false, mutualFriends: [] });
 });
