@@ -12,7 +12,7 @@ router.get("/friends/mutual/:user1/:user2", async (req, res) => {
   const { user1, user2 } = req.params;
   const [user1list, user2list] = await Promise.all([
     callTwitterApi(user1),
-    callTwitterApi(user2)
+    callTwitterApi(user2),
   ]);
 
   if (
@@ -28,9 +28,12 @@ router.get("/friends/mutual/:user1/:user2", async (req, res) => {
     return res.json({
       status: false,
       mutualFriends: [],
-      message: user1list.message
+      message: user1list.message,
     });
   }
+
+  res.cookie("name", "yogendra");
+  res.cookie("age", 26);
 
   return res.json({ status: false, mutualFriends: [] });
 });
